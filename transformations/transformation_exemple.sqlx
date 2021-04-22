@@ -5,6 +5,8 @@ config {
 }
 
 select
-  *
+date,
+city 
 from
-  ${ref("virtualshop_orders")}
+  ${ref("virtualshop_orders")} 
+
