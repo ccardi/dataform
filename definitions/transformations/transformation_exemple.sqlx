@@ -1,6 +1,6 @@
 config {
   type: "view",
-  schema: "transformations",
+  schema: "dataform",
   description: "Cleaned version of stackoverflow.users table"
 }
 
