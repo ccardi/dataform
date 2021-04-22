@@ -1,0 +1,10 @@
+config {
+  type: "view",
+  schema: "transformations",
+  description: "Cleaned version of stackoverflow.users table"
+}
+
+select
+  *
+from
+  ${ref("virtualshop_orders")}
