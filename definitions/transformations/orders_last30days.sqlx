@@ -1,0 +1,20 @@
+config {
+  type: "table"
+}
+
+select
+  *
+FROM
+  ${ref("virtualshop_orders")}
+WHERE
+  DATE(tdate) BETWEEN
+  ${
+    constants.returnLastDate(${ref("virtualshop_orders")})
+  }
+  AND
+  ${
+    constants.returnLastDate($ {
+      ref("virtualshop_orders")
+    })
+  }
+  -30
