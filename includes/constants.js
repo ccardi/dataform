@@ -10,9 +10,9 @@ function regionGroup(city) {
           END`;
 };
 
-function returnLastDate(table_name){
-  return `SELECT max(DATE(tdate)) last_date,
-  FROM ${table_name}}`
+function lastDate(table_name){
+  return `SELECT max(DATE(tdate))- 30 last_date,
+  FROM ${table_name}`;
 }
 
 module.exports = { PROJECT_ID, date_start, returnLastDate, regionGroup };
