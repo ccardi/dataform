@@ -13,4 +13,7 @@ select
 from
   ${ref("virtualshop_orders")} a, a.orderDetails b
   JOIN ${ref("virtualshop_products")} c ON b.uniq_id=c.uniq_id
+WHERE
+  DATE(tdate) >=
+  (${constants.lastDate(`${ref("virtualshop_orders")}`)})
 group by 1,2,3,4
