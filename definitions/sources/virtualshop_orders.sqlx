@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "pod-fr-retail",
+  schema: "supply_demo",
+  name: "virtualshop_orders",
+  description: "raw orders"
+}

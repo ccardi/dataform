@@ -1,0 +1,10 @@
+config {
+  type: "table",
+  schema: "dataform",
+  name:"orders_last_date",
+  description: "Get last table partition date"
+}
+WITH table1 as(
+SELECT max(DATE(tdate)) last_date,
+  FROM ${ref("virtualshop_orders")})
+  SELECT * from table1

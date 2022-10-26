@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "test-dataform",
   "dependencies": {
     "@dataform/core": "2.0.0-beta.1"
   }
+=======
+    "dependencies": {
+        "@dataform/core": "1.19.0"
+    }
+>>>>>>> refs/heads/master
 }

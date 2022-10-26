@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "defaultSchema": "dataform",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
@@ -6,3 +7,10 @@
   "defaultLocation": "EU"
 }
     
+=======
+    "warehouse": "bigquery",
+    "defaultSchema": "dataform",
+    "assertionSchema": "dataform_assertions",
+    "defaultDatabase": "pod-fr-retail"
+}
+>>>>>>> refs/heads/master

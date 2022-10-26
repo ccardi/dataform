@@ -1,0 +1,19 @@
+config {
+  type: "table",
+  schema: "dataform",
+  description: "Revenue per product, city, date"
+}
+
+select
+  date,
+  city,
+  b.uniq_id,
+  c.product_name,
+  sum(b.price_total) revenue
+from
+  ${ref("virtualshop_orders")} a, a.orderDetails b
+  JOIN ${ref("virtualshop_products")} c ON b.uniq_id=c.uniq_id
+WHERE
+  DATE(tdate) >=
+  (${constants.lastDate(`${ref("virtualshop_orders")}`)})
+group by 1,2,3,4

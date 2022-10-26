@@ -1,0 +1,14 @@
+config {
+  type: "table"
+  ,name:'toto'
+}
+
+select
+  date
+FROM
+  ${ref("virtualshop_orders")}
+WHERE
+  DATE(tdate) >=
+  (${constants.lastDate(`${ref("virtualshop_orders")}`)})
+group by 1
+order by 1 desc
