@@ -1,6 +1,7 @@
 {
-    "warehouse": "bigquery",
-    "defaultSchema": "dataform",
-    "assertionSchema": "dataform_assertions",
-    "defaultDatabase": "pod-fr-retail"
+  "defaultSchema": "dataform",
+  "assertionSchema": "dataform_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "pod-fr-retail",
+  "defaultLocation": "EU"
 }
