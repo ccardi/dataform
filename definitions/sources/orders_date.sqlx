@@ -6,8 +6,6 @@ config {
 }
 WITH table1 as(
 SELECT max(DATE(tdate)) last_date,
-  FROM ${ref("virtualshop_orders")})
+  FROM ${ref("virtualshop_orders")}
+)
   SELECT * from table1
-
-
-  //hello

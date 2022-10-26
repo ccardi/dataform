@@ -3,10 +3,10 @@ const date_start="2017-08-01"
 
 function regionGroup(city) {
   return `CASE
-          WHEN ${city} IN ("US", "CA") THEN "NA"
-          WHEN ${city} IN ("GB", "FR", "DE", "IT", "PL") THEN "EU"
-          WHEN ${city} IN ("Paris") THEN "toto"
-          ELSE "Other regions"
+          WHEN ${city} IN ("Paris") THEN "Paris"
+          --WHEN ${city} IN ("GB", "FR", "DE", "IT", "PL") THEN "EU"
+          --WHEN ${city} IN ("Paris") THEN "toto"
+          ELSE "Others"
           END`;
 };
 

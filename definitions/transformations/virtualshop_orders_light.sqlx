@@ -1,0 +1,8 @@
+config {
+  type: "table"
+}
+
+select
+  * except(orderDetails)
+FROM ${ref("virtualshop_orders")}
+where DATE(tdate) >= "${constants.date_start}"

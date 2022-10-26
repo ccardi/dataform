@@ -1,6 +1,6 @@
 config {
   type: "table"
-  ,name:'toto'
+  ,name:'test_juan'
 }
 
 select
