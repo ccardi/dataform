@@ -1,11 +1,11 @@
 const PROJECT_ID = "pod-fr-retail";
-const date_start="2017-08-01"
+
+const date_start="2017-08-01";
 
 function regionGroup(city) {
   return `CASE
           WHEN ${city} IN ("Paris") THEN "Paris"
-          --WHEN ${city} IN ("GB", "FR", "DE", "IT", "PL") THEN "EU"
-          --WHEN ${city} IN ("Paris") THEN "toto"
+          WHEN ${city} IN ("GB", "FR", "DE", "IT", "PL") THEN "EU"
           ELSE "Others"
           END`;
 };
