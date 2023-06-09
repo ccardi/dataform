@@ -1,7 +1,7 @@
 config { type: "assertion" }
 SELECT
-  *
+  uniq_id
 FROM
   ${ref("virtualshop_products")}
 WHERE
-  uniq_id IS NULL
+  uniq_id IS NOT NULL
