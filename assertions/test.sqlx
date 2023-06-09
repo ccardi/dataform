@@ -1,0 +1,7 @@
+config { type: "assertion" }
+SELECT
+  *
+FROM
+  ${ref("virtualshop_products")}
+WHERE
+  uniq_id IS NULL

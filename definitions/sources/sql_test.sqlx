@@ -1,0 +1,2 @@
+CREATE TABLE pod-fr-retail.demo.virtualshop_orders_test AS
+SELECT * FROM pod-fr-retail.demo.virtualshop_orders limit 100
