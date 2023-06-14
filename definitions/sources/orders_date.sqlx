@@ -2,7 +2,10 @@ config {
   type: "table",
   schema: "dataform",
   name:"orders_last_date",
-  description: "Get last table partition date"
+  description: "Get last table partition date",
+  assertions: {
+    uniqueKey: ["last_date"]
+  }
 }
 WITH table1 as(
 SELECT max(DATE(tdate)) last_date,
