@@ -1,19 +1,22 @@
 config {
   type: "table",
-  schema: "dataform",
+  schema: "promotions_analysis",
   description: "Revenue per product, city, date"
 }
-
 select
   date,
   city,
-  b.uniq_id,
-  c.product_name,
-  sum(b.price_total) revenue
+  ${functions.regionGroup("city")} as region,
+  a.uniq_id,
+  c.Product_Name_New,
+  sum(a.price_total) revenue
 from
-  ${ref("virtualshop_orders")} a, a.orderDetails b
-  JOIN ${ref("virtualshop_products")} c ON b.uniq_id=c.uniq_id
+  ${ref("virtualshop_orders_sku")} a
+  JOIN ${ref("promo")} c ON a.uniq_id=c.Product_ID
 WHERE
-  DATE(tdate) >=
-  (${constants.lastDate(`${ref("virtualshop_orders")}`)})
-group by 1,2,3,4
+  date >= (${functions.last30day(
+      `${ref("virtualshop_orders_sku")}`,
+      "date"
+    )}
+  )
+group by 1,2,3,4,5

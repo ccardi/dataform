@@ -1,7 +1,3 @@
-const PROJECT_ID = "pod-fr-retail";
-
-const date_start="2017-08-01";
-
 function regionGroup(city) {
   return `CASE
           WHEN ${city} IN ("Paris") THEN "Paris"
@@ -10,9 +6,9 @@ function regionGroup(city) {
           END`;
 };
 
-function lastDate(table_name){
-  return `SELECT max(DATE(tdate))- 30 as last_date,
+function last30day (table_name, date_column){
+  return `SELECT max(${date_column})- 30 as last_date,
   FROM ${table_name}`;
 }
 
-module.exports = { PROJECT_ID, date_start, lastDate, regionGroup };
+module.exports = {last30day, regionGroup };

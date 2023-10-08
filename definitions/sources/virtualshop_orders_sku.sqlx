@@ -1,0 +1,6 @@
+config {
+  type: "declaration",
+  schema: "retail_demo",
+  name: "virtualshop_orders_sku",
+  description: "raw orders"
+}

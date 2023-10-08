@@ -1,0 +1,6 @@
+config {
+  type: "declaration",
+  schema: "promotion_analysis",
+  name: "promo",
+  description: "products promotions"
+}

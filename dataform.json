@@ -2,6 +2,5 @@
   "defaultSchema": "dataform",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
-  "defaultDatabase": "pod-fr-retail",
   "defaultLocation": "EU"
 }

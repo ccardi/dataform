@@ -1,0 +1,7 @@
+config { type: "assertion" }
+SELECT
+  Product_ID
+FROM
+  ${ref("promo")}
+WHERE
+  Product_ID IS NOT NULL
